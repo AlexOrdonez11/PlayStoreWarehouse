@@ -1,14 +1,24 @@
 from DBLoader import App
 import pandas as pd
-
-
-
-if __name__== "__main__":
-    app=App("")
-    app.getApp()
-    app.getReviews(num=3)
+import os
+import numpy as np
 
 def CvsInsert(df, str):
-    df.to_csv("./data/"+ str +".csv")
+    file_path_os ="./data/"+ str +".csv"
+    if os.path.exists(file_path_os):
+        df.to_csv("./data/"+ str +".csv", mode='a', header=False,index=False)
+    else:
+        df.to_csv("./data/"+ str +".csv", mode='a', header=True, index=False)
+
+if __name__== "__main__":
+    df= pd.read_csv("./top5_cleaned.csv")
+    df = np.array_split(df,12)[1]
+    for i, row in df.iterrows(): 
+        app=App(row['App Id'])
+        print(app.appId)
+        CvsInsert(app.getApp(),"AppInformation")
+        CvsInsert(app.getReviews(),"Reviews")
+
+
 
 

@@ -4,11 +4,11 @@ import os
 import numpy as np
 
 def CvsInsert(df, str):
-    file_path_os ="./data/"+ str +".csv"
+    file_path_os ="./data/"+ str +".xlsx"
     if os.path.exists(file_path_os):
-        df.to_csv("./data/"+ str +".csv", mode='a', header=False,index=False)
+        df.to_excel("./data/"+ str +".xlsx", mode='a', header=False,index=False)
     else:
-        df.to_csv("./data/"+ str +".csv", mode='a', header=True, index=False)
+        df.to_excel("./data/"+ str +".xlsx", mode='a', header=True, index=False)
 
 if __name__== "__main__":
     df= pd.read_csv("./top5_cleaned.csv")

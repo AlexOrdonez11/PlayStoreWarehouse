@@ -34,17 +34,21 @@ SQL Database MDF File = https://drive.google.com/file/d/14Fxz1u0bNp4IbxWUy_CXxz0
 │   ├── Local_SA.ipynb                          # Local trials on Sentiment Analysis and Clustering
 │   ├── DBLoader.py                             # Creates structure to get data through google-play-scraper
 │   ├── main.py                                 # Gets data from playstore and stores it in excel/csv flles
+
 ├── sql_visual_studio/
 │   ├── AppInformationStagingTableLoadETL.zip   # Applies KMeans to emotion vectors (reviews/users)
 │   ├── ReviewsETL.zip                          # Processes 1M reviews in chunks using Hugging Face
 │   ├── FinalProject_Cube.sln                   # Visual Studio Cube to help performance        
 │   ├── FinalProject_Report.sln                 # Visual Studio Report to dispkay KPIs
+
 ├── data/
 │   ├── review...                               # Raw reviews
 │   ├── AppData...                              # Apps metadata
+
 ├── pbix/
 │   └── FinalProject_Visualizations.pbix        # Power BI reporting
 │   └── SentimentAnalysis_PresentationDash.pbix # Power BI reporting
+
 ├── README.md                                   # This file
 
 

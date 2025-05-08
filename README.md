@@ -26,6 +26,7 @@ SQL Database MDF File = https://drive.google.com/file/d/14Fxz1u0bNp4IbxWUy_CXxz0
 
 ```plaintext
 📦 project/
+
 ├── notebooks_python/
 │   ├── Clustering_Reviews_Users.py             # Applies KMeans to emotion vectors (reviews/users)
 │   ├── Sentiment_Analysis_Gathering_Store.py   # Processes 1M reviews in chunks using Hugging Face
